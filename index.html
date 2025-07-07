@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- LOGO -->
+    <link rel="shortcut icon" href="./logo-calculadora.png" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="calculador">
+            <form>
+                <div class="display">
+                    <input class="numbers" type="text" name="display" value="0" readonly>
+                </div>
+                <div class="top-row">
+                    <button id="clear-delete-btn" class="btn-top" type="button">
+                        AC
+                    </button>
+                    <input class="btn-top" type="button" value="+/-">
+                    <input class="btn-top" type="button" value="%">
+                    <input class="btn-right" type="button" value="/">
+                </div>
+                <div class="middle-row">
+                    <input class="btn-number" type="button" value="7">
+                    <input class="btn-number" type="button" value="8">
+                    <input class="btn-number" type="button" value="9">
+                    <input class="btn-right" type="button" value="x">
+                </div>
+                <div class="middle-row">
+                    <input class="btn-number" type="button" value="4">
+                    <input class="btn-number" type="button" value="5">
+                    <input class="btn-number" type="button" value="6">
+                    <input class="btn-right" type="button" value="-">
+                </div>
+                <div class="middle-row">
+                    <input class="btn-number" type="button" value="1">
+                    <input class="btn-number" type="button" value="2">
+                    <input class="btn-number" type="button" value="3">
+                    <input class="btn-right" type="button" value="+">
+                </div>
+                <div class="last-row">
+                    <div class="icon-container">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <input class="btn-number" type="button" value="0">
+                    <input class="btn-number" type="button" value=",">
+                    <input class="btn-right" type="button" value="=">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
