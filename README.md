@@ -1,23 +1,27 @@
 # 📱 Calculadora estilo iPhone
 
-Esta es una **calculadora web inspirada en el diseño y funcionalidad del iPhone**, creada con HTML, CSS y JavaScript puro.  
-Tiene una interfaz limpia y responsiva, con botones redondeados y un display que adapta su tamaño de fuente según la longitud del número mostrado, para mantener una apariencia elegante y funcional.
+Una **calculadora web inspirada en el diseño de iOS**, desarrollada con HTML, CSS y JavaScript moderno, con un enfoque modular y profesional.  
+Cuenta con una interfaz clara, responsiva y personalizable, ideal para escritorio y móviles.
 
 ---
 
 ## ⚙️ Funcionalidades
 
-- Operaciones básicas: suma, resta, multiplicación y división.
-- Botones especiales:
-  - `AC` para limpiar todo.
-  - `⌫` para borrar el último dígito (cambia dinámicamente con el estado).
-  - Cambio de signo `+/-`.
-  - Porcentaje `%`.
-- Manejo de decimales con coma (`,`) que se transforma internamente en punto decimal.
-- Prevención de errores, como división por cero que muestra un mensaje de error.
-- Interfaz responsive que se adapta a dispositivos móviles y tablets.
-- Indicador visual mediante iconos y cambio dinámico de botón borrar/limpiar.
-- Uso de íconos con Font Awesome para mejorar la experiencia visual.
+- **Operaciones básicas**: suma, resta, multiplicación y división.
+- **Botones especiales**:
+  - `AC` / `⌫` para limpiar todo o borrar dígito por dígito.
+  - `+/-` para cambiar el signo (con ícono Font Awesome).
+  - `%` para cálculo de porcentaje inteligente.
+  - `,` para ingresar números decimales al estilo latino (internamente convertidos a punto `.`).
+- **Historial interactivo**:
+  - Guarda automáticamente cada operación.
+  - Se puede acceder y reutilizar tocando en la lista.
+  - Persistencia en `localStorage` incluso si recargás la página.
+- **Tema claro / oscuro** con solo un clic.
+- **Sonido en botones** (MP3 local optimizado).
+- Interfaz 100% responsive: se adapta a móviles, tablets y escritorio.
+- Estética iOS: colores, espaciado y fuente al estilo nativo.
+- Accesibilidad básica (`aria-label`, input readonly, etc).
 
 ---
 
@@ -25,26 +29,47 @@ Tiene una interfaz limpia y responsiva, con botones redondeados y un display que
 
 ```
 CALCULADORA
-├── index.html              # Estructura HTML de la calculadora
-├── style.css               # Estilos CSS con diseño responsive y colores oscuros
-├── script.js               # Lógica JavaScript que controla el funcionamiento de la calculadora
-└── logo-calculadora.png    # Icono
+├── index.html            
+├── Assets/
+│   └── logo-calculadora.png
+├── Scripts/ 
+│   ├── main.js           
+│   ├── calculator.js       
+│   ├── display.js           
+│   ├── history.js          
+│   ├── theme.js              
+│   └── sound.js          
+├── Sound/
+│   └── mobile-button.mp3     
+├── Styles/
+│   ├── main.css            
+│   ├── var.css            
+│   ├── themes.css             
+│   ├── btn-rows.css          
+│   ├── display.css           
+│   ├── history.css          
+│   └── panelHis.css
+└── README.md
 ```
 
 ---
 
 ## 🛠️ Tecnologías usadas
 
-- **HTML5** para la estructura semántica.
-- **CSS3** con Flexbox y media queries para un diseño responsivo y moderno.
-- **JavaScript (ES6)** para la lógica, eventos y manipulación del DOM.
-- **Font Awesome 6.4** para los íconos (borrar, calculadora).
+- **HTML5** semántico.
+- **CSS3** con Flexbox, media queries y dark mode.
+- **JavaScript ES6+** con módulos separados y buena organización.
+- Font Awesome 6.4 para íconos visuales (⌫, +/-, historial, etc.).
+- LocalStorage para persistencia de historial.
+- MP3 embebido para feedback sonoro.
 
 ---
 
-## 🚀 Proba la calculadora
+## 🚀 Probar la calculadora
 
 [![Probar Calculadora iPhone](https://img.shields.io/badge/Probar%20Calculadora%20iPhone-%23D32F2F?style=for-the-badge&logo=netlify&logoColor=white)](https://cal-iphone.netlify.app/)
+
+---
 
 ## ⚙️ Uso / Cómo correrla
 
@@ -58,14 +83,14 @@ cd Calculadora
 # Abrir el archivo `index.html` en cualquier navegador moderno (Chrome, Firefox, Edge, Safari).
 
 # Usar la calculadora directamente, funciona offline sin necesidad de servidor.
- ```
+```
 
 ---
 
-## 💡 Mejoras futuras (Ideas)
+## 💡 Mejoras futuras (ideas)
 
-- Soporte para operaciones más avanzadas (potencias, raíces, etc).
+- ✳️ Calculadora científica con funciones avanzadas:
 
-- Historial de cálculos recientes.
+  - Potencias, raíces, trigonometría, paréntesis, etc.
 
-- Tema claro / oscuro para elegir.
+- 🖐️ Soporte para teclado físico.
