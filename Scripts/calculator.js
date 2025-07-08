@@ -8,6 +8,19 @@ function initializeCalculator() {
     const buttons = document.querySelectorAll('input[type="button"]');
     const clearDeleteBtn = document.getElementById('clear-delete-btn');
 
+    const negateBtn = document.getElementById('negate-btn');
+
+    negateBtn.addEventListener('click', () => {
+        if (currentInput !== '0' && currentInput !== 'Error') {
+            const num = parseFloat(currentInput.replace(',', '.'));
+            if (!isNaN(num)) {
+                currentInput = (num * -1).toString().replace('.', ',');
+                updateDisplay(currentInput);
+            }
+        }
+    });
+
+
     buttons.forEach(button => {
         const value = button.value;
 
@@ -50,16 +63,6 @@ function initializeCalculator() {
 
             else if (value === '=') {
                 calculate();
-            }
-
-            else if (value === '+/-') {
-                if (currentInput !== '0' && currentInput !== 'Error') {
-                    const num = parseFloat(currentInput.replace(',', '.'));
-                    if (!isNaN(num)) {
-                        currentInput = (num * -1).toString().replace('.', ',');
-                        updateDisplay(currentInput);
-                    }
-                }
             }
 
             else if (value === '%') {

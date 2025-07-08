@@ -21,7 +21,7 @@ function updateDisplay(value) {
 function formatNumber(numStr) {
     if (numStr === 'Error' || numStr === '') return 'Error';
 
-    // [MODIFICADO] Manejo de la coma y los ceros decimales inmediatos
+    // Manejo de la coma y los ceros decimales inmediatos
     // Si la cadena de números contiene una coma
     if (numStr.includes(',')) {
         // Divide la cadena en parte entera y parte decimal
@@ -36,7 +36,7 @@ function formatNumber(numStr) {
         return decimalPart !== undefined ? `${formattedIntegerPart},${decimalPart}` : `${formattedIntegerPart},`;
     }
 
-    // [MODIFICADO] Resto del código (para números enteros sin coma)
+    // Resto del código (para números enteros sin coma)
     // Si la cadena es "0" o empieza con "0" y es solo "0", se mantiene.
     // Esto es para el caso inicial o cuando se ingresa solo "0".
     if (numStr === '0' && numStr.length === 1) {
