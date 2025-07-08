@@ -1,6 +1,4 @@
-/* ==================
-    ESTILOS BASE
-================== */
+/* ESTILOS BASE */
 * {
     margin: 0;
     padding: 0;
@@ -34,9 +32,7 @@ body {
     justify-content: space-between;
 }
 
-/* ==============================
-    TEMAS (Modo Claro y Oscuro)
-============================== */
+/* TEMAS (Modo Claro y Oscuro) */
 body.dark-mode {
     background-color: hsl(200, 50%, 10%);
 }
@@ -65,9 +61,7 @@ body.light-mode .numbers {
     background-color: transparent;
 }
 
-/* ======================
-   PANTALLA PRINCIPAL
-====================== */
+/* PANTALLA PRINCIPAL */
 .display {
     display: flex;
     flex-direction: column;
@@ -94,9 +88,7 @@ body.light-mode .numbers {
     white-space: nowrap;
 }
 
-/* =======================
-   BOTONES Y FILAS
-======================= */
+/* BOTONES Y FILAS */
 .top-row,
 .middle-row,
 .last-row {
@@ -166,9 +158,7 @@ body.light-mode .icon-container {
     margin: 2px;
 }
 
-/* ======================
-   TOGGLE DE HISTORIAL Y TEMA
-====================== */
+/* TOGGLE DE HISTORIAL Y TEMA */
 .history-toggle,
 .theme-toggle {
     display: flex;
@@ -188,9 +178,7 @@ body.light-mode .theme-toggle {
     color: #FF9500;
 }
 
-/* ====================
-   PANEL DE HISTORIAL
-==================== */
+/* PANEL DE HISTORIAL */
 .history-panel {
     position: absolute;
     bottom: 0;
