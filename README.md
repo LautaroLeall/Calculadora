@@ -42,7 +42,11 @@ CALCULADORA
 
 ---
 
-## 🚀 Uso / Cómo correrla
+## 🚀 Proba la calculadora
+
+[![Probar Calculadora iPhone](https://img.shields.io/badge/Probar%20Calculadora%20iPhone-%23D32F2F?style=for-the-badge&logo=netlify&logoColor=white)](https://cal-iphone.netlify.app/)
+
+## ⚙️ Uso / Cómo correrla
 
 1. Clonar o descargar el repositorio:
    ```bash
