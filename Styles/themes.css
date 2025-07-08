@@ -1,0 +1,28 @@
+/* TEMAS (Modo Claro y Oscuro) */
+body.dark-mode {
+    background-color: var(--backgraund-dark);
+}
+
+body.light-mode {
+    background-color: var(--backgraund-light);
+}
+
+body.dark-mode .calculador {
+    background-color: #040404;
+    color: white;
+}
+
+body.light-mode .calculador {
+    background-color: #ffffff;
+    color: black;
+}
+
+body.dark-mode .numbers {
+    color: white;
+    background-color: transparent;
+}
+
+body.light-mode .numbers {
+    color: black;
+    background-color: transparent;
+}

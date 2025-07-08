@@ -1,0 +1,75 @@
+/* BOTONES Y FILAS */
+.top-row,
+.middle-row,
+.last-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-top,
+.btn-right,
+.btn-number {
+    border: 0;
+    outline: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 2px;
+    font-size: 22px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-top i {
+    font-size: 18px;
+    pointer-events: none;
+}
+
+button:active,
+input:active {
+    transform: scale(0.95);
+    filter: brightness(1.2);
+}
+
+body.dark-mode .btn-top {
+    background-color: var(--btn-top-dark);
+    color: white;
+}
+
+body.light-mode .btn-top {
+    background-color: var(--btn-top-light);
+    color: black;
+}
+
+body.dark-mode .btn-right {
+    background-color: var(--btn-right-dark);
+    color: white;
+}
+
+body.light-mode .btn-right {
+    background-color: var(--btn-right-light);
+    color: white;
+}
+
+body.dark-mode .btn-number,
+body.dark-mode .icon-container {
+    background-color: var(--btn-number-dark);
+    color: white;
+}
+
+body.light-mode .btn-number,
+body.light-mode .icon-container {
+    background-color: var(--btn-number-light);
+    color: black;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin: 2px;
+}

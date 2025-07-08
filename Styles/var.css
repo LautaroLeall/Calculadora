@@ -1,0 +1,11 @@
+/* VARIABLES */
+:root {
+    --backgraund-light: hsl(200, 50%, 90%);
+    --backgraund-dark: hsl(200, 50%, 10%);
+    --btn-top-dark: #585857;
+    --btn-top-light: #d0d0d0;
+    --btn-right-dark: #D57D00;
+    --btn-right-light: #ff9c00;
+    --btn-number-dark: #1E1E1E;
+    --btn-number-light: #e0e0e0;
+}
