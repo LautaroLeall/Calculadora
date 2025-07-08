@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ICONS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- ICONOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- LOGO -->
     <link rel="shortcut icon" href="./logo-calculadora.png" type="image/x-icon">
@@ -13,13 +13,28 @@
     <title>Calculadora</title>
 </head>
 
-<body>
+<body class="dark-mode">
     <div class="container">
         <div class="calculador">
             <form>
+                <div class="firs-row">
+                    <!-- Toggle para tema oscuro/claro -->
+                    <div class="theme-toggle" id="theme-toggle">
+                        <i class="fa-solid fa-moon"></i>
+                    </div>
+
+                    <!-- Botón para mostrar el historial -->
+                    <div class="history-toggle" id="toggle-history">
+                        <i class="fa-solid fa-list"></i>
+                    </div>
+                </div>
+                <!-- Pantalla principal -->
                 <div class="display">
+                    <div class="operation" id="operation-display"></div>
                     <input class="numbers" type="text" name="display" value="0" readonly>
                 </div>
+
+                <!-- Fila superior de botones -->
                 <div class="top-row">
                     <button id="clear-delete-btn" class="btn-top" type="button">
                         AC
@@ -55,6 +70,23 @@
                     <input class="btn-right" type="button" value="=">
                 </div>
             </form>
+
+            <!-- Panel de historial con arrastre -->
+            <div class="history-panel" id="history-panel">
+                <div class="history-handle" id="history-handle"></div>
+                <div class="history-header">
+                    <span>Historial</span>
+                    <button id="clear-history">Limpiar</button>
+                </div>
+                <div class="history-content">
+                    <ul id="history-list"></ul>
+                    <div id="empty-history-message" class="empty-history-message">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>No hay historial</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     <script src="script.js"></script>
