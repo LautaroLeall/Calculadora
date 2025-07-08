@@ -1,0 +1,26 @@
+/* PANTALLA PRINCIPAL */
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 50px 0 10px 0;
+    height: 60px;
+}
+
+.operation {
+    color: #aaa;
+    font-size: 14px;
+    text-align: right;
+    height: 25px;
+}
+
+.numbers {
+    border: 0;
+    outline: 0;
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    transition: font-size 0.2s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+}
