@@ -48,12 +48,17 @@ CALCULADORA
 
 ## ⚙️ Uso / Cómo correrla
 
-Clonar o descargar el repositorio:
-   ```bash
+```bash
+# Clonar el repositorio
    git clone <https://github.com/LautaroLeall/Calculadoral>
-   ```
-Abrir el archivo `index.html` en cualquier navegador moderno (Chrome, Firefox, Edge, Safari).
-Usar la calculadora directamente, funciona offline sin necesidad de servidor.
+
+# Ingresar al directorio
+cd Calculadora
+
+# Abrir el archivo `index.html` en cualquier navegador moderno (Chrome, Firefox, Edge, Safari).
+
+# Usar la calculadora directamente, funciona offline sin necesidad de servidor.
+ ```
 
 ---
 
