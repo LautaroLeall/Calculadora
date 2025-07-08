@@ -50,7 +50,7 @@ CALCULADORA
 
 ```bash
 # Clonar el repositorio
-   git clone <https://github.com/LautaroLeall/Calculadoral>
+git clone <https://github.com/LautaroLeall/Calculadoral>
 
 # Ingresar al directorio
 cd Calculadora
