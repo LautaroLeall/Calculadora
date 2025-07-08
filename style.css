@@ -1,3 +1,15 @@
+/* VARIABLES */
+:root {
+    --backgraund-light: hsl(200, 50%, 90%);
+    --backgraund-dark: hsl(200, 50%, 10%);
+    --btn-top-dark: #585857;
+    --btn-top-light: #d0d0d0;
+    --btn-right-dark: #D57D00;
+    --btn-right-light: #ff9c00;
+    --btn-number-dark: #1E1E1E;
+    --btn-number-light: #e0e0e0;
+}
+
 /* ESTILOS BASE */
 * {
     margin: 0;
@@ -18,15 +30,15 @@ body {
 
 .calculador {
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 300px;
-    height: 550px;
+    height: 500px;
     position: relative;
     overflow: hidden;
     transition: background-color 0.3s ease;
 }
 
-.firs-row {
+.first-row {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -34,11 +46,11 @@ body {
 
 /* TEMAS (Modo Claro y Oscuro) */
 body.dark-mode {
-    background-color: hsl(200, 50%, 10%);
+    background-color: var(--backgraund-dark);
 }
 
 body.light-mode {
-    background-color: hsl(200, 50%, 90%);
+    background-color: var(--backgraund-light);
 }
 
 body.dark-mode .calculador {
@@ -72,7 +84,7 @@ body.light-mode .numbers {
 
 .operation {
     color: #aaa;
-    font-size: 20px;
+    font-size: 14px;
     text-align: right;
     height: 25px;
 }
@@ -116,35 +128,41 @@ body.light-mode .numbers {
     pointer-events: none;
 }
 
+button:active,
+input:active {
+    transform: scale(0.95);
+    filter: brightness(1.2);
+}
+
 body.dark-mode .btn-top {
-    background-color: #585857;
+    background-color: var(--btn-top-dark);
     color: white;
 }
 
 body.light-mode .btn-top {
-    background-color: #d0d0d0;
+    background-color: var(--btn-top-light);
     color: black;
 }
 
 body.dark-mode .btn-right {
-    background-color: #D57D00;
+    background-color: var(--btn-right-dark);
     color: white;
 }
 
 body.light-mode .btn-right {
-    background-color: #ff9c00;
+    background-color: var(--btn-right-light);
     color: white;
 }
 
 body.dark-mode .btn-number,
 body.dark-mode .icon-container {
-    background-color: #1E1E1E;
+    background-color: var(--btn-number-dark);
     color: white;
 }
 
 body.light-mode .btn-number,
 body.light-mode .icon-container {
-    background-color: #e0e0e0;
+    background-color: var(--btn-number-light);
     color: black;
 }
 
@@ -166,19 +184,25 @@ body.light-mode .icon-container {
     font-size: 22px;
     cursor: pointer;
     margin-bottom: 10px;
+    overflow: auto;
 }
 
 body.dark-mode .history-toggle,
 body.dark-mode .theme-toggle {
-    color: #D57D00;
+    color: var(--btn-right-dark);
 }
 
 body.light-mode .history-toggle,
 body.light-mode .theme-toggle {
-    color: #FF9500;
+    color: var(--btn-right-light);
 }
 
 /* PANEL DE HISTORIAL */
+.numbers,
+.history-panel {
+    transition: all 0.2s ease-in-out;
+}
+
 .history-panel {
     position: absolute;
     bottom: 0;
@@ -235,11 +259,11 @@ body.light-mode .history-panel {
 }
 
 body.dark-mode .history-header button {
-    color: #D57D00;
+    color: var(--btn-right-dark);
 }
 
 body.light-mode .history-header button {
-    color: #FF9500;
+    color: var(--btn-right-light);
 }
 
 .history-content {
@@ -260,7 +284,7 @@ body.light-mode .history-header button {
 }
 
 .history-operation {
-    font-size: 16px;
+    font-size: 13px;
     color: #888;
     margin-bottom: 4px;
 }

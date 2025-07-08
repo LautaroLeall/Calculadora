@@ -14,13 +14,15 @@
 </head>
 
 <body class="dark-mode">
+
     <div class="container">
         <div class="calculador">
-            <form>
-                <div class="firs-row">
+            <div class="form">
+                <div class="first-row">
                     <!-- Toggle para tema oscuro/claro -->
                     <div class="theme-toggle" id="theme-toggle">
                         <i class="fa-solid fa-moon"></i>
+                        <script src="/Scripts/theme.js"></script>
                     </div>
 
                     <!-- Botón para mostrar el historial -->
@@ -28,15 +30,18 @@
                         <i class="fa-solid fa-list"></i>
                     </div>
                 </div>
+
                 <!-- Pantalla principal -->
                 <div class="display">
                     <div class="operation" id="operation-display"></div>
-                    <input class="numbers" type="text" name="display" value="0" readonly>
+                    <input class="numbers" type="text" name="display" value="0" role="textbox" aria-readonly="true"
+                        readonly>
+                    <script src="/Scripts/display.js"></script>
                 </div>
 
                 <!-- Fila superior de botones -->
                 <div class="top-row">
-                    <button id="clear-delete-btn" class="btn-top" type="button">
+                    <button id="clear-delete-btn" class="btn-top" type="button" aria-label="Borrar o reiniciar">
                         AC
                     </button>
                     <input class="btn-top" type="button" value="+/-">
@@ -69,7 +74,9 @@
                     <input class="btn-number" type="button" value=",">
                     <input class="btn-right" type="button" value="=">
                 </div>
-            </form>
+                <script src="/Scripts/calculator.js"></script>
+                <script src="/Scripts/sound.js"></script>
+            </div>
 
             <!-- Panel de historial con arrastre -->
             <div class="history-panel" id="history-panel">
@@ -85,11 +92,12 @@
                         <span>No hay historial</span>
                     </div>
                 </div>
+                <script src="/Scripts/history.js"></script>
             </div>
-
         </div>
+        <script src="/Scripts/main.js"></script>
     </div>
-    <script src="script.js"></script>
+
 </body>
 
 </html>
